@@ -2,13 +2,16 @@ package main;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import services.CommentService;
-import services.UserService;
 
 public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
-        System.out.println("Before retrieving the CommentService");
-        var service = context.getBean(CommentService.class);
-        System.out.println("After retrieving the CommentService");
+
+        var c1 = context.getBean("commentService", CommentService.class);
+        var c2 = context.getBean("commentService", CommentService.class);
+
+        boolean b1 = c1 == c2;
+        System.out.println(b1);
+
     }
 }
