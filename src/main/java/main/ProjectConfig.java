@@ -10,8 +10,4 @@ import services.CommentService;
 @ComponentScan(basePackages =  {"repositories","services"})
 public class ProjectConfig {
 
-    @Bean
-    public CommentService commentService() {
-        return new CommentService();
-    }
 }
