@@ -5,12 +5,8 @@ import org.springframework.context.annotation.*;
 import services.CommentService;
 
 @Configuration
+@ComponentScan(basePackages = {"services"})
 public class ProjectConfig {
 
-    @Bean
-    @Scope(BeanDefinition.SCOPE_PROTOTYPE)
-    public CommentService commentService(){
-        return new CommentService();
-    }
 
 }

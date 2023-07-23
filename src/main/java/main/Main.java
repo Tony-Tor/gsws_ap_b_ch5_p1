@@ -7,6 +7,8 @@ public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
+        System.out.println("STart");
+
         var c1 = context.getBean("commentService", CommentService.class);
         var c2 = context.getBean("commentService", CommentService.class);
 
