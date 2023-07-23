@@ -5,8 +5,7 @@ import org.springframework.context.annotation.*;
 import services.CommentService;
 
 @Configuration
-@ComponentScan(basePackages = {"services"})
+@ComponentScan(basePackages = {"services","repositories"})
 public class ProjectConfig {
-
 
 }
